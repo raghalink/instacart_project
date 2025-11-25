@@ -17,3 +17,7 @@ __pycache__/
 # Ignore IDE stuff
 .vscode/
 .ipynb_checkpoints/
+
+# Ignore venv files
+.venv/
+venv/
