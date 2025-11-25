@@ -1,0 +1,19 @@
+# Ignore raw data
+data_raw/
+*.csv
+*.xlsx
+*.parquet
+
+# Ignore temp files
+*.tmp
+*.log
+*.bak
+~$*
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore IDE stuff
+.vscode/
+.ipynb_checkpoints/
