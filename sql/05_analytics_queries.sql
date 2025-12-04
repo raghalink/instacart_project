@@ -177,8 +177,19 @@ ORDER BY reorder_rate_pct DESC;
 -- SECTION 4: Basket & Co-occurrence
 -- ===================================================
 -- Q13. Average basket size
+WITH order_basket_sizes AS (
+    SELECT
+        order_id,
+        COUNT(*) AS basket_size
+    FROM instacart.order_products
+    GROUP BY order_id
+)
+SELECT
+    ROUND(AVG(t.basket_size)::numeric, 2) AS avg_basket_size
+FROM order_basket_sizes AS t;
 
 -- Q14. Basket size by DOW/hour
+
 -- Q15. Product pair co-occurrence
 
 -- ===================================================
