@@ -18,3 +18,4 @@ CREATE INDEX idx_products_aisle_id
 
 CREATE INDEX idx_order_products_order_id
     ON instacart.order_products(order_id);
+    
