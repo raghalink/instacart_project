@@ -273,4 +273,30 @@ SELECT
         2
     ) AS overall_reorder_rate_pct
 FROM instacart.order_products;
+
 -- Q20. Next-order inclusion probability for products
+WITH user_product_orders as 
+( 
+SELECT user_id,product_id,order_number
+FROM instacart.v_order_lines
+),
+
+next_order_match AS (
+SELECT a.product_id,
+CASE WHEN b.product_id IS NOT NULL 
+THEN 1
+ELSE 0
+END AS bought_next
+FROM user_product_orders AS a
+LEFT JOIN user_product_orders AS b
+ON a.user_id = b.user_id
+AND a.product_id = b.product_id
+AND a.order_number + 1 = b.order_number
+)
+SELECT product_id,SUM(bought_next) AS repeat_buys,
+COUNT(*) AS total_buys,
+ROUND((100 * SUM(bought_next)::numeric)/COUNT(*),2) AS next_order_inclusion_problty
+FROM next_order_match 
+GROUP BY product_id 
+ORDER BY next_order_inclusion_problty DESC
+LIMIT 20;
