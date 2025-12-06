@@ -1,7 +1,7 @@
 -- ===================================================
 -- SECTION 1: Sanity & High-Level KPIs
 -- ===================================================
--- Q1. Total volume snapshot
+-- Q1. Total volume
 
 -- Total users
 SELECT COUNT(DISTINCT orders.user_id)  FROM instacart.orders;
@@ -265,7 +265,7 @@ ORDER BY order_number ASC;
 -- ===================================================
 -- SECTION 6: Reorder Dynamics
 -- ===================================================
--- Q19. Overall reorder ratio
+-- Q19. Overall reorder rate
 SELECT
     ROUND(
         100.0 * SUM(CASE WHEN reordered = 1 THEN 1 ELSE 0 END)
