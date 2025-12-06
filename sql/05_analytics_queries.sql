@@ -222,8 +222,7 @@ WITH product_pair AS (
       ON a.order_id = b.order_id
      AND a.product_id < b.product_id
     GROUP BY
-        LEAST(a.product_id, b.product_id),
-        GREATEST(a.product_id, b.product_id)
+        a.product_id, b.product_id   
 )
 SELECT
 	p1.product_name,
