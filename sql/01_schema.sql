@@ -45,5 +45,7 @@ CREATE TABLE order_products(
 	PRIMARY KEY (order_id,product_id),
 	add_to_cart_order      SMALLINT,
 	reordered              BOOLEAN,
+	FOREIGN KEY (order_id) REFERENCES instacart.orders(order_id),
+	FOREIGN KEY (product_id) REFERENCES instacart.products(product_id),
 	);
 
