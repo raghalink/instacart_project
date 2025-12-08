@@ -32,6 +32,8 @@ ORDER BY order_count DESC
 LIMIT 1000;
 
 -- Materialized view for next_order_inlcusion_probability
+DROP MATERIALIZED VIEW IF EXISTS 
+instacart.mv_next_order_inclusion_probability
 
 WITH user_product_orders as 
 ( 

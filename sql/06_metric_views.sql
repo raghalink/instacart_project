@@ -184,7 +184,7 @@ GROUP BY o.order_dow
 ORDER BY o.order_dow;
 
 -- test view 
-SELECT * FROM instacart.v_basket_size_by_dow;
+-- SELECT * FROM instacart.v_basket_size_by_dow;
 
 
 -- Q14. Basket size by hour_of_day
@@ -203,14 +203,14 @@ GROUP BY o.order_hour_of_day
 ORDER BY o.order_hour_of_day;
 
 -- test view 
-SELECT * FROM instacart.v_basket_size_by_hour;
+-- SELECT * FROM instacart.v_basket_size_by_hour;
 
 -- Q15. Product pair co-occurrence (by product_id and names) 
 CREATE OR REPLACE VIEW instacart.v_product_pair_cooccurrence AS
 SELECT * FROM instacart.mv_product_coocurrence;
 
 -- test view 
-SELECT * FROM instacart.v_product_pair_cooccurrence;
+-- SELECT * FROM instacart.v_product_pair_cooccurrence;
 
 /* =========================================================
    5. USER BEHAVIOR & LIFECYCLE
@@ -224,7 +224,7 @@ FROM instacart.orders
 GROUP BY user_id
 ORDER BY order_count DESC;
 -- test view 
-SELECT * FROM instacart.v_user_order_counts;
+-- SELECT * FROM instacart.v_user_order_counts;
 
 -- Q17. Time between orders (median per user)
 CREATE OR REPLACE VIEW instacart.v_user_median_order_gap AS
@@ -237,7 +237,7 @@ GROUP BY user_id
 ORDER BY median_days_between_orders DESC;
 
 -- test view 
-SELECT * FROM instacart.v_user_median_order_gap;
+-- SELECT * FROM instacart.v_user_median_order_gap;
 
 -- Q18. Basket size vs order_number (lifecycle KPI)
 CREATE OR REPLACE VIEW instacart.v_lifecycle_basket_size AS
@@ -250,7 +250,7 @@ ON o.order_id = v.order_id
 GROUP BY o.order_number
 ORDER BY o.order_number ASC;
 -- test view 
-SELECT * FROM instacart.v_lifecycle_basket_size;
+-- SELECT * FROM instacart.v_lifecycle_basket_size;
 
 
 /* =========================================================
@@ -264,11 +264,11 @@ ROUND(100.0 * SUM(CASE WHEN reordered = 1 THEN 1 ELSE 0 END)::numeric/ COUNT(*),
 FROM instacart.order_products;
 
 -- test view 
-SELECT * FROM instacart.v_overall_reorder_rate;
+-- SELECT * FROM instacart.v_overall_reorder_rate;
 
 -- Q20. Next-order inclusion probability (per product)
 CREATE OR REPLACE VIEW instacart.v_next_order_inclusion_probability AS
 SELECT * FROM instacart.v_next_order_inclusion_probability;
 
 -- test view 
-SELECT * FROM instacart.v_next_order_inclusion_probability;
+-- SELECT * FROM instacart.v_next_order_inclusion_probability;
