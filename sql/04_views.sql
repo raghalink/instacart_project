@@ -1,11 +1,5 @@
---
-======================================================================
-
 -- Create base views 
 
-======================================================================
-
-CREATE SCHEMA IF NOT EXISTS analytics;
 
 -- Base orderline view (orders + order_products)
 
