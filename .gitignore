@@ -21,3 +21,6 @@ __pycache__/
 # Ignore venv files
 .venv/
 venv/
+
+# ignore .user.yml files 
+dbt/.user.yml/
