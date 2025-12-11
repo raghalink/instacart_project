@@ -24,3 +24,6 @@ venv/
 
 # ignore .user.yml files 
 dbt/.user.yml/
+
+# ignore profiles.yml
+dbt/profiles.yml
