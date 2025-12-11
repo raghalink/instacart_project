@@ -15,11 +15,15 @@ To engineer a retail data warehouse and analytics pipeline—designing every lay
 
 ## 🏗️ Architecture Overview
 
-```
-Raw CSVs → Python ETL → PostgreSQL (raw schema,indexing and analytics) → SQL transformations → dbt models (marts) → Power BI (DirectQuery dashboard)
-```
+![pipeline](images/architecture.png)
 
 **(Insert your architecture diagram here)**
+
+---
+
+## 📊 Dataset
+
+This project uses the public **Instacart Online Grocery Shopping 2017** dataset from Kaggle (3M+ rows of orders, products, and baskets).
 
 ---
 
@@ -54,7 +58,7 @@ All business logic was crafted in SQL, including joins, KPIs, and aggregations. 
 
 After validating SQL logic, all transformations were modeled in dbt. Developed staging, intermediate, and mart layers with full lineage documentation.
 
-![Lineal dbt graph](images/dbt_graph.png)
+![dbt lineage graph](images/dbt_graph.png)
 
 
 
@@ -62,7 +66,7 @@ After validating SQL logic, all transformations were modeled in dbt. Developed s
 
 ## 📊 4. Power BI Dashboard (DirectQuery)
 
-Built a 3-page Power BI dashboard connected live via DirectQuery to handle 3M+ rows in real-time. Showcased order KPIs, product insights, and user behavior without import mode. performance analyzing log can be found in images section.
+Built a 3-page Power BI dashboard connected live via DirectQuery to handle 3M+ rows in real-time. Showcased order KPIs, product insights, and user behavior without import mode. performance screenshots are available in images folder.
 
 ![dashboard_pg_1](dashboards/dashboard_1.png)
 ![dashboard_pg_2](dashboards/dashboard_2.png)
