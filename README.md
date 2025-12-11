@@ -56,11 +56,9 @@ All business logic was crafted in SQL, including joins, KPIs, and aggregations. 
 
 ## 🧱 3. dbt Modeling
 
-After validating SQL logic, all transformations were modeled in dbt. Developed staging, intermediate, and mart layers with full lineage documentation.
+After validating SQL logic, all transformations were modeled in dbt. Developed staging, intermediate, and mart layers with full lineage documentation.dbt/README.md for further references.
 
 ![dbt lineage graph](images/dbt_graph.png)
-
-
 
 ---
 
