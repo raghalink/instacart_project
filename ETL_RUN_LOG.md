@@ -1,6 +1,6 @@
 # ETL Run Log – Instacart Project
 
-This log documents all major ETL steps taken in transforming and loading the Instacart dataset.
+This log documents all major ETL steps taken in transforming and loading the dataset.
 
 ---
 
@@ -8,7 +8,7 @@ This log documents all major ETL steps taken in transforming and loading the Ins
 **Date:** 2025-12-01  
 **Database:** instacart  
 **Schema:** instacart  
-**Source:** Kaggle Instacart Dataset
+**Source:** Kaggle Instacart Dataset 
 
 ### ✔ Cleaning (Performed in Notebooks)
 - Verified PK uniqueness on departments, aisles, products, orders.

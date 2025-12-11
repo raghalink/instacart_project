@@ -17,8 +17,6 @@ To engineer a retail data warehouse and analytics pipeline—designing every lay
 
 ![pipeline](images/architecture.png)
 
-
-
 ---
 
 ## 📊 Dataset
@@ -74,7 +72,69 @@ Built a 3-page Power BI dashboard connected live via DirectQuery to handle 3M+ r
 
 ## 📂 Repository Structure
 
-*(Include your existing folder structure here)*
+Retail_Analytics_Engineering_Pipeline/
+├── dashboards/
+│   ├── dashboard.pbix
+│   ├── dashboard.pdf
+│   ├── dashboard_1.png
+│   ├── dashboard_2.png
+│   └── dashboard_3.png
+│
+├── data_raw/
+│   ├── aisles.csv
+│   ├── departments.csv
+│   ├── orders.csv
+│   ├── order_products__prior.csv
+│   ├── order_products__train.csv
+│   └── products.csv
+│
+├── data_clean/
+│   ├── aisles.csv
+│   ├── departments.csv
+│   ├── orders.csv
+│   ├── order_products.csv
+│   └── products.csv
+│
+├── dbt/
+│   ├── dbt_project.yml
+│   ├── profiles.yml
+│   ├── models/
+│   │   ├── staging/
+│   │   │   ├── stg_aisles.sql
+│   │   │   ├── stg_departments.sql
+│   │   │   ├── stg_orders.sql
+│   │   │   ├── stg_order_products.sql
+│   │   │   └── stg_products.sql
+│   │   ├── intermediate/
+│   │   │   └── int_order_basket_sizes.sql
+│   │   └── mart/
+│   │       ├── agg_orders_by_dow.sql
+│   │       ├── agg_product_metrics.sql
+│   │       ├── fct_kpi_overview.sql
+│   │       └── fct_orders_by_dow.sql
+│   └── sources.yml
+│
+├── images/
+│   ├── architecture.png
+│   ├── dbt_graph.png
+│   ├── schema.png
+│   └── views_and_mvs.png
+│
+├── notebooks/
+│   ├── 01_explore_raw.ipynb
+│   ├── 02_clean_transform.ipynb
+│   └── 03_load_to_postgres.ipynb
+│
+├── sql/
+│   ├── 01_schema.sql
+│   ├── 02_test_load.sql
+│   ├── 03_indexes.sql
+│   ├── 04_analytics_queries.sql
+│   ├── 05_views.sql
+│   ├── 06_materialized_views.sql
+│   └── 07_metric_views.sql
+│
+└── ETL_RUN_LOG.md
 
 ---
 
