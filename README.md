@@ -96,5 +96,3 @@ Built a 3-page Power BI dashboard connected live via DirectQuery to handle 3M+ r
 Raga, Aspiring Analytics Engineer | Berlin, Germany
 
 ---
-
-This version is concise, highlights the manual engineering work, and is structured for a GitHub audience. Insert your screenshots in the marked spots, and you’re good to go!
