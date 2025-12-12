@@ -9,7 +9,7 @@
 
 ## 🚀 Project Purpose
 
-To engineer a retail data warehouse and analytics pipeline—designing every layer (raw, staging, intermediate, marts) from scratch in PostgreSQL, modeling them in dbt Core, and delivering a live Power BI dashboard via DirectQuery.
+To design and deliver a production-style retail analytics warehouse and BI pipeline, implementing all layers (raw → staging → marts) in PostgreSQL, modeling transformations in dbt, and serving live dashboards via Power BI DirectQuery.
 
 ---
 
@@ -57,7 +57,7 @@ All business logic was crafted in SQL, including joins, KPIs, and aggregations. 
 
 ## 🧱 3. dbt Modeling
 
-After validating SQL logic, all transformations were modeled in dbt. Developed staging, intermediate, and mart layers with full lineage documentation.dbt/README.md for further references.
+dbt was introduced after validating core SQL logic to demonstrate how existing transformations can be productionized into a maintainable, version-controlled modeling layer.Developed staging, intermediate, and mart layers with full lineage documentation.dbt/README.md for further references.
 
 ![dbt lineage graph](images/dbt_graph.png)
 
