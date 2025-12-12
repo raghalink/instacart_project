@@ -3,13 +3,17 @@
 
 # 📦 InstaCart Retail Data Warehouse & Analytics Engineering Pipeline
 
-**Built from scratch: PostgreSQL, SQL, dbt, and Power BI (DirectQuery on 3M+ rows).**
+**PostgreSQL-centric analytics warehouse with SQL semantic layer and Power BI DirectQuery (3M+ rows), plus dbt modeling for transformation documentation and lineage.**
+
 
 ---
 
-## 🚀 Project Purpose
+🚀 Project Purpose (Corrected)
 
-To design and deliver a production-style retail analytics warehouse and BI pipeline, implementing all layers (raw → staging → marts) in PostgreSQL, modeling transformations in dbt, and serving live dashboards via Power BI DirectQuery.
+To design and deliver a production-style retail analytics warehouse in PostgreSQL, implementing transformation logic as optimized SQL views and materialized views, and serving live Power BI dashboards via DirectQuery.
+After validating and optimizing SQL logic at the database layer, dbt was introduced to replicate and document selected transformations, demonstrate staging → intermediate → mart modeling patterns, and generate lineage documentation.
+
+> Note: The primary BI layer consumes PostgreSQL views (including materialized views wrapped as views). dbt models were built to learn and showcase analytics-engineering workflows, not to replace the SQL semantic layer.
 
 ---
 
