@@ -140,15 +140,18 @@ Retail_Analytics_Engineering_Pipeline/
 │
 └── ETL_RUN_LOG.md
 
-_____________________________________________-
+______________________________________________
 ---
 
 ## 📝 How to Run Locally
 
-1. Clone the repo and set up the Python environment.
-2. Run ETL notebooks to load data into PostgreSQL.
-3. Execute metric_views in Postgre.
-4. Open Power BI and connect via DirectQuery.
+
+1. Clone the repository and set up the Python environment.
+2. Run the ETL notebooks to load and clean the raw Instacart data into PostgreSQL.
+3. Execute the SQL scripts under `sql/` (schemas, indexes, views, and materialized views) to prepare the analytics layer.
+4. Open Power BI and connect to PostgreSQL via DirectQuery to the prepared views.
+
+> Note: dbt models in this repository were developed to replicate and document selected transformations and generate lineage. The Power BI dashboard consumes optimized PostgreSQL views and materialized views directly.
 
 ---
 
