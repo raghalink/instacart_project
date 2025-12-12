@@ -51,13 +51,13 @@ Manually designed schemas, implemented primary/foreign keys, and created materia
 
 ## 🔄 2. SQL Transformations & Optimization
 
-All transformations and metric logic was implemented in SQL at the database level to ensure correctness, performance, and reuse across dbt models and BI.business logic was crafted in SQL, including joins, KPIs, and aggregations. Optimized performance with indexing and materialized views before layering dbt on top.
+All transformation and metric logic was implemented in SQL at the database level to ensure correctness, performance, and reuse across downstream layers. Performance was optimized using indexing and materialized views before introducing dbt for transformation modeling.
 
 ---
 
 ## 🧱 3. dbt Modeling
 
-After validating core SQL logic at the database level, selected transformations were replicated and modeled in dbt to understand dbt workflows, layering (staging → marts), and lineage generation. The primary BI layer continued to consume optimized database views and materialized views via DirectQueryDeveloped staging, intermediate, and mart layers with full lineage documentation.dbt/README.md for further references.
+After validating core SQL logic at the database level, selected transformations were replicated and modeled in dbt to learn dbt workflows, layering patterns (staging → intermediate → marts), and lineage generation. The primary BI layer continued to consume optimized database views and materialized views via DirectQuery. Additional details are documented in dbt/README.md.
 
 ![dbt lineage graph](images/dbt_graph.png)
 
@@ -65,7 +65,7 @@ After validating core SQL logic at the database level, selected transformations 
 
 ## 📊 4. Power BI Dashboard (DirectQuery)
 
-The dashboard consumes only prepared views from postgre, avoiding complex DAX and keeping BI logic minimal.Built a 3-page Power BI dashboard connected live via DirectQuery to handle 3M+ rows in real-time. Showcased order KPIs, product insights, and user behavior without import mode. performance screenshots are available in images folder.
+The dashboard consumes only prepared PostgreSQL views, avoiding complex DAX and keeping BI logic minimal. A 3-page Power BI dashboard is connected live via DirectQuery to handle 3M+ rows in real time.
 
 ![dashboard_pg_1](dashboards/dashboard_1.png)
 ![dashboard_pg_2](dashboards/dashboard_2.png)
@@ -147,7 +147,7 @@ _____________________________________________-
 
 1. Clone the repo and set up the Python environment.
 2. Run ETL notebooks to load data into PostgreSQL.
-3. Execute dbt models.
+3. Execute metric_views in Postgre.
 4. Open Power BI and connect via DirectQuery.
 
 ---
