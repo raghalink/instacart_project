@@ -268,7 +268,7 @@ FROM instacart.order_products;
 
 -- Q20. Next-order inclusion probability (per product)
 CREATE OR REPLACE VIEW instacart.v_next_order_inclusion_probability AS
-SELECT * FROM instacart.v_next_order_inclusion_probability;
+SELECT * FROM instacart.mv_next_order_inclusion_probability;
 
 -- test view 
 -- SELECT * FROM instacart.v_next_order_inclusion_probability;
