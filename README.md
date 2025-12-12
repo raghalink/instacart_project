@@ -25,7 +25,7 @@ After validating and optimizing SQL logic at the database layer, dbt was introdu
 
 ## 📊 Dataset
 
-This project uses the public [Instacart Online Gorcery Analysis Dataset](https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset)  dataset from Kaggle (3M+ rows of orders, products, and baskets).
+This project uses the public [Instacart Online Gorcery Analysis Dataset](https://www.kaggle.com/datasets/yasserh/instacart-online-grocery-basket-analysis-dataset) dataset from Kaggle (3M+ rows of orders,products,order_products,aisles,department).
 
 ---
 
