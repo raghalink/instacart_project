@@ -8,7 +8,7 @@
 
 ---
 
-🚀 Project Purpose
+## 🚀 Project Objective
 
 To design and deliver a production-style retail analytics warehouse in PostgreSQL, implementing transformation logic as optimized SQL views and materialized views, and serving live Power BI dashboards via DirectQuery.
 After validating and optimizing SQL logic at the database layer, dbt was introduced to replicate and document selected transformations, demonstrate staging → intermediate → mart modeling patterns, and generate lineage documentation.
