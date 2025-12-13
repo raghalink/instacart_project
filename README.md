@@ -47,8 +47,11 @@ This project uses the public [Instacart Online Gorcery Analysis Dataset](https:/
 
 ## 🗄️ 1. Data Warehouse Design
 
-Engineered a complete warehouse architecture in PostgreSQL with raw, staging, intermediate, and mart layers.
-Manually designed schemas, implemented primary/foreign keys, and created materialized views for performance.
+Engineered a PostgreSQL-centric analytics warehouse with clearly separated raw data, base tables, and a SQL semantic layer.
+
+The warehouse schema was manually designed, including primary and foreign key relationships, indexing strategies, and query-optimized structures. Core business logic and KPIs were implemented directly in SQL using views and materialized views, with heavy computations pre-aggregated for performance.
+
+Materialized views were selectively wrapped into standard views to ensure compatibility with Power BI DirectQuery, enabling live dashboards over 3M+ rows while maintaining query performance and stability.
 
 ![Schema](images/schema.png)
 ![views and mvs](images/views_and_mvs.png)
